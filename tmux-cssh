@@ -300,7 +300,7 @@ for host in ${HOSTS}; do
 		  initTmuxCall="false"
     fi
 	else
-    tmux split-window -t "${TMUX_SESSION_NAME}" "${connectString}" && \
+    tmux split-window -h -t "${TMUX_SESSION_NAME}" "${connectString}" && \
     tmux select-layout -t "${TMUX_SESSION_NAME}" "${TMUX_LAYOUT}"
 	fi
 done
